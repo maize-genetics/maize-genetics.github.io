@@ -3,6 +3,7 @@
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="./css/main.css">
+<script src="https://unpkg.com/kotlin-playground@1" data-selector=".biokotlin-code" data-server="http://cbsumm16.biohpc.cornell.edu:8015/"></script>
 
 
 <!-- The head -->
@@ -13,6 +14,23 @@
 <body>
     <h2>Welcome</h2>
     <p>On this website, you will find links to pieces of BioKotlin code that will be compiled on our own custom compiler server.</p>
+
+        <div class="biokotlin-code">
+        <pre><code>
+import krangl.*
+
+fun main(args: Array&lt;String&gt;) {
+    val users : DataFrame = dataFrameOf(
+            "firstName", "lastName", "age", "hasSudo")(
+            "max", "smith" , 53, false,
+            "eva", "miller", 23, true,
+            null , "meyer" , 23, null
+    )
+
+    println(users)
+}
+        </code></pre>
+        </div>
 </body>
 
 </html>
