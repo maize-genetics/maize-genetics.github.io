@@ -1,0 +1,52 @@
+
+
+/*Text headings and body*/
+h1 {
+    border-bottom: 1px solid #e2e2e2;
+    color: #242424;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 170%;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    padding-bottom: 8px;
+}
+h2, h3 {
+    color: #242424;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+li {
+    margin-bottom: 3px;
+}
+li::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+}
+mark {
+    background: #e3e4fa;
+    font-family: 'Open Sans', sans-serif;
+}
+p, li {
+    color: #242424;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 90%;
+}
+pre, code {
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+
+/*Links*/
+a.body:hover {
+    background: #e3e4fa; 
+    color: #2373ff;
+    text-decoration: none;
+}
+a.body:link, a.body:visited {
+    color: #2373ff;
+    text-decoration: none;
+}
