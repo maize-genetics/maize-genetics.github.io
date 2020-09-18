@@ -1,2 +1,2 @@
-# maize-genetics.github.io
-Deployment site for test code
+# Buckler Lab Test Site
+Deployment site for testing BioKotlin Code.
