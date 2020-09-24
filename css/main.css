@@ -1,3 +1,9 @@
+/*Brandon's Custom CSS*/
+/*Last Updated: 11.01.17*/
+
+/*Import fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Condensed:400,700|Robot+Mono');
+
 
 
 /*Text headings and body*/
@@ -49,4 +55,183 @@ a.body:hover {
 a.body:link, a.body:visited {
     color: #2373ff;
     text-decoration: none;
+}
+
+
+
+/*Tables*/
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    overflow-x: auto;
+    width: 90%;
+}
+td {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 90%;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #e3e4fa;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 90%;
+    padding: 8px;
+}
+tr:nth-child(odd){
+    background-color: #f3f3f3;
+}
+
+
+/*Text wrappers*/
+body {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+    margin: auto;
+    text-align: justify;
+    width: 780px;
+}
+.codechunk {
+    background: #f3f3f3;
+    border-color: #e2e2e2;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 15px;
+    width: 780px;
+}
+.outchunk {
+    border-color: #e2e2e2;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'Roboto Mono', monospace;    
+    font-size: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    width: 780px;
+}
+.note {
+    margin-top: 20px;    
+    width: 780px;
+}
+.notebody {
+    background-color: #e9f2fa;
+    color: #242424;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 90%;    
+    padding: 5px 10px 5px 10px;
+}
+.notehead {
+    background-color: #6db2de;    
+    padding: 5px 10px 5px 10px;
+}
+.notehead:before{
+    color: #ffffff;
+    content: "\f024  Note";
+    font-family: FontAwesome, 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    word-spacing: 5px;
+}
+.warning {
+    margin-top: 20px;    
+    width: 780px;
+}
+.warningbody {
+    background-color: #fae9ca;
+    color: #242424;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 90%;    
+    padding: 5px 10px 5px 10px;
+}
+.warninghead {
+    background-color: #f0b37d;    
+    padding: 5px 10px 5px 10px;
+}
+.warninghead:before{
+    color: #ffffff;
+    content: "\f12a  Warning";
+    font-family: FontAwesome, 'Roboto Condensed', sans-serif;
+    word-spacing: 5px;
+}
+
+
+
+/*Nav bar*/
+.navbar {
+    background-color: #f3f3f3;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 90%;
+    font-weight: 700;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 800px;
+    text-align: right;
+}
+.navbar a {
+    color: #8d8d8d;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.navbar a.left {
+    padding-left: 10px;
+    float: left;
+}
+.navbar a:hover {
+    color: #242424;
+}
+.navbar .current {
+    color: #242424;
+    border-bottom: 2px solid #242424;
+    padding-bottom: 8px;
+}
+
+
+
+/*Icon properties*/
+.icon {
+    padding-top: 75px;
+    text-align: center;
+}
+.fa {
+    color: #8d8d8d;
+}
+.fa:hover {
+    color: #242424;
+}
+.ai {
+    color: #8d8d8d;
+}
+.ai:hover {
+    color: #242424;
+}
+
+
+
+/*Main page image*/
+.homeimg {
+    padding-top: 50px;
+    text-align: center;
+}
+
+
+
+/*404 image*/
+.avatar {
+    padding-top: 50px;
+    text-align: center;
 }
