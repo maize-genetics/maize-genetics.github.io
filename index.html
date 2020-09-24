@@ -3,20 +3,32 @@
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="./css/main.css">
-<script src="https://unpkg.com/kotlin-playground@1" data-selector=".biokotlin-code" data-server="http://cbsumm16.biohpc.cornell.edu:8015/"></script>
+<script src="https://unpkg.com/kotlin-playground@1" data-selector=".biokotlin-code" data-server="http://cbsumm06.biohpc.cornell.edu:8015/"></script>
 
 
-<!-- The head -->
 <head>
     <title>Buckler Lab Code Deployment</title>
 </head>
 
 <body>
-    <h2>Welcome</h2>
-    <p>On this website, you will find links to pieces of BioKotlin code that will be compiled on our own custom compiler server.</p>
+    <div class="wrap">
+    <h2>Kotlin Compiler Server Tests</h2>
 
-        <div class="biokotlin-code">
-        <pre><code>
+    <h3>Base Kotlin</h3>
+    <p>Works:</p>
+    <div class="biokotlin-code">
+    <pre><code>
+fun main(args: Array&lt;String&gt;) {
+    println("Compiled from CBSUMM06 Server")
+}
+    </code></pre>
+    </div>
+
+    <br><br>
+
+    <h3>Simple library import - Krangl</h3>
+    <div class="biokotlin-code">
+    <pre><code>
 import krangl.*
 
 fun main(args: Array&lt;String&gt;) {
@@ -29,8 +41,28 @@ fun main(args: Array&lt;String&gt;) {
 
     println(users)
 }
-        </code></pre>
-        </div>
+    </code></pre>
+    </div>
+
+    <br><br>
+
+    <h3>Simple BioKotlin task - Seq classes</h3>
+    <div class="biokotlin-code">
+    <pre><code>
+import biokotlin.seq.*
+
+fun main(args: Array&lt;String&gt;) {
+    // A test sequence
+    val seq = NucSeq("ACGGCGATACGGCGAT")
+
+    // The central dogma
+    println(seq.complement())
+    println(seq.transcribe())
+    println(seq.translate())
+}
+    </code></pre>
+    </div>
+    </div>
 </body>
 
 </html>
