@@ -15,38 +15,49 @@
     <h2>Kotlin Compiler Server Tests</h2>
 
     <h3>Base Kotlin</h3>
-    <p>Works:</p>
     <div class="biokotlin-code">
     <pre><code>
 fun main(args: Array&lt;String&gt;) {
-    println("Compiled from CBSUMM06 Server")
+    println("Compiled from the CBSUMM06 Server")
 }
     </code></pre>
     </div>
 
     <br><br>
 
-    <h3>Simple library import - Krangl</h3>
+    <h3>Simple library import - Krangl and Kotlin Statistis</h3>
     <div class="biokotlin-code">
     <pre><code>
 import krangl.*
+import org.nield.kotlinstatistics.*
 
 fun main(args: Array&lt;String&gt;) {
+    // Make a data frame
     val users : DataFrame = dataFrameOf(
             "firstName", "lastName", "age", "hasSudo")(
             "max", "smith" , 53, false,
             "eva", "miller", 23, true,
             null , "meyer" , 23, null
     )
-
     println(users)
+    
+    // Run some stats
+    val someNumbers = sequenceOf(1.0, 3.0, 5.0, 42.0, 3.14)
+    println("""
+    --- --- ---
+    Kotlin Statististics
+    Mean..... ${someNumbers.average()}
+    Median... ${someNumbers.median()}
+    Min...... ${someNumbers.min()}
+    Max...... ${someNumbers.max()}
+    """.trimIndent())
 }
     </code></pre>
     </div>
 
     <br><br>
 
-    <h3>Simple BioKotlin task - Seq classes</h3>
+    <h3>BioKotlin v0.01 task - <code>Seq</code> classes</h3>
     <div class="biokotlin-code">
     <pre><code>
 import biokotlin.seq.*
@@ -62,6 +73,24 @@ fun main(args: Array&lt;String&gt;) {
 }
     </code></pre>
     </div>
+
+    <br><br>
+
+    <h3>BioKotlin v0.02 task - pathways</h3>
+    <div class="biokotlin-code">
+    <pre><code>
+import biokotlin.kegg.*
+
+fun main(args: Array&lt;String&gt;) {
+    val pathID = "path:zma00072"
+    val pathTest = Kegg.pathway(pathID)
+    println(pathTest.genes)
+}
+    </code></pre>
+    </div>
+
+    <br><br><br><br><br>
+
     </div>
 </body>
 
